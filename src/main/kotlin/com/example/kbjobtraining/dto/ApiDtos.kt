@@ -1,4 +1,4 @@
-package com.example.back.dto
+package com.example.kbjobtraining.dto
 
 data class FindQuestionResponse(
     val result: List<Question>

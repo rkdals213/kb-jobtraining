@@ -1,7 +1,7 @@
-package com.example.back.infrastructure
+package com.example.kbjobtraining.infrastructure
 
-import com.example.back.dto.QueryDatabaseRequest
-import com.example.back.dto.QueryDatabaseResponse
+import com.example.kbjobtraining.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.dto.QueryDatabaseResponse
 import feign.RequestInterceptor
 import feign.RequestTemplate
 import org.springframework.cloud.openfeign.FeignClient

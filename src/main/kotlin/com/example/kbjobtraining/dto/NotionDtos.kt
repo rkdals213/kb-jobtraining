@@ -1,4 +1,4 @@
-package com.example.back.dto
+package com.example.kbjobtraining.dto
 
 
 data class QueryDatabaseRequest(

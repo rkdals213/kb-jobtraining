@@ -1,4 +1,4 @@
-package com.example.back.config
+package com.example.kbjobtraining.config
 
 import org.springframework.cloud.openfeign.FeignFormatterRegistrar
 import org.springframework.context.annotation.Bean

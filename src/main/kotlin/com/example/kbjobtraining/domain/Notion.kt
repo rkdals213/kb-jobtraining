@@ -1,8 +1,8 @@
-package com.example.back.domain
+package com.example.kbjobtraining.domain
 
-import com.example.back.infrastructure.NotionFeignClient
-import com.example.back.dto.QueryDatabaseRequest
-import com.example.back.dto.QueryDatabaseResponse
+import com.example.kbjobtraining.infrastructure.NotionFeignClient
+import com.example.kbjobtraining.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.dto.QueryDatabaseResponse
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.stereotype.Component
 

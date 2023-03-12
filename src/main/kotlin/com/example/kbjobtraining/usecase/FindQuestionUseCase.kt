@@ -1,8 +1,8 @@
-package com.example.back.usecase
+package com.example.kbjobtraining.usecase
 
-import com.example.back.dto.QueryDatabaseRequest
-import com.example.back.dto.QueryDatabaseResponse
-import com.example.back.domain.Notion
+import com.example.kbjobtraining.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.dto.QueryDatabaseResponse
+import com.example.kbjobtraining.domain.Notion
 import org.springframework.stereotype.Component
 
 @Component
