@@ -1,5 +1,6 @@
 package com.example.kbjobtraining.infrastructure
 
+import com.example.kbjobtraining.config.NotionProperty
 import com.example.kbjobtraining.dto.QueryDatabaseRequest
 import com.example.kbjobtraining.dto.QueryDatabaseResponse
 import feign.RequestInterceptor
@@ -21,12 +22,14 @@ interface NotionFeignClient {
 }
 
 @Configuration
-class HeaderConfiguration {
+class HeaderConfiguration(
+    private val notionProperty: NotionProperty,
+) {
     @Bean
     fun requestInterceptor(): RequestInterceptor {
         return RequestInterceptor { requestTemplate: RequestTemplate ->
-            requestTemplate.header("Authorization", "Bearer secret_eyS0bviY5ZuhjTswcvRHmqw6I40Q0GBxAlJoIJGnLNF")
-            requestTemplate.header("Notion-Version", "2022-02-22")
+            requestTemplate.header("Authorization", notionProperty.bearerToken)
+            requestTemplate.header("Notion-Version", notionProperty.notionVersion)
         }
     }
 }

@@ -11,19 +11,19 @@
         </svg>
         <ul>
             <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-                <a href="/">Home</a>
+                <a data-sveltekit-preload-data="tap" href="/">Home</a>
             </li>
             <li aria-current={$page.url.pathname === '/subject-one' ? 'page' : undefined}>
-                <a href="/subject-one">1. 상품판매</a>
+                <a data-sveltekit-preload-data="tap" href="/subject-one">1. 상품판매</a>
             </li>
             <li aria-current={$page.url.pathname === '/subject-two' ? 'page' : undefined}>
-                <a href="/subject-two">2. 외환</a>
+                <a data-sveltekit-preload-data="tap" href="/subject-two">2. 외환</a>
             </li>
             <li aria-current={$page.url.pathname === '/subject-three' ? 'page' : undefined}>
-                <a href="/subject-three">3. 다른거</a>
+                <a data-sveltekit-preload-data="tap"href="/subject-three">3. 다른거</a>
             </li>
             <li aria-current={$page.url.pathname === '/subject-four' ? 'page' : undefined}>
-                <a href="/subject-four">4. 다른거</a>
+                <a data-sveltekit-preload-data="tap" href="/subject-four">4. 다른거</a>
             </li>
         </ul>
         <svg viewBox="0 0 2 3" aria-hidden="true">

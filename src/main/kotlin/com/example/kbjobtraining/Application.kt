@@ -1,6 +1,6 @@
 package com.example.kbjobtraining
 
-import com.example.kbjobtraining.domain.NotionProperty
+import com.example.kbjobtraining.config.NotionProperty
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.boot.context.properties.EnableConfigurationProperties
