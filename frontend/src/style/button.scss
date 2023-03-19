@@ -1,0 +1,53 @@
+$color-light: #fff;
+$color-dark: #444;
+$color-secondary-light: #FEB6D3;
+$color-secondary: #FE79AB;
+$color-success: #01CECB;
+$color-success-light: #96E6E6;
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  & .btn {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    justify-content: left;
+    text-align: left;
+    align-items: center;
+
+    &:hover {
+      opacity: .85;
+    }
+
+    &:active {
+      opacity: .75;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &-correct {
+      background: $color-success;
+      color: $color-success-light;
+    }
+
+    &-wrong {
+      background: $color-secondary;
+      color: $color-secondary-light;
+    }
+
+    &-nothing {
+      background: $color-light;
+      color: $color-dark;
+      border: 1px solid $color-dark;
+    }
+  }
+}

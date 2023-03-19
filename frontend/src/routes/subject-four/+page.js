@@ -1,4 +1,6 @@
+import {PUBLIC_SERVER_URL} from '$env/static/public'
+
 export async function load({fetch}) {
-  const res = await fetch('http://localhost:8080/question?subject=SUBJECT_FOUR')
+  const res = await fetch(PUBLIC_SERVER_URL + '/question?subject=SUBJECT_FOUR')
   return await res.json()
 }
