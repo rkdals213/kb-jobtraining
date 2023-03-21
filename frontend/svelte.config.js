@@ -5,8 +5,12 @@ import preprocessor from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    env: {
+      dir: "./config"
+    }
   },
+  // dir: "./config",
   preprocess: [preprocessor({
     scss: {
       prependData: ["@import \"./src/style/button\"; @import \"./src/style/box\";"]

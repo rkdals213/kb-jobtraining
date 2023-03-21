@@ -36,7 +36,7 @@
         position: relative;
         padding: 0;
         margin: 0;
-        height: 3em;
+        height: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;

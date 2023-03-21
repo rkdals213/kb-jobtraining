@@ -1,3 +1,6 @@
 [submodule "src/main/resources/config"]
 	path = src/main/resources/config
 	url = https://github.com/rkdals213/kb-jobtraining-config.git
+[submodule "frontend/config"]
+	path = frontend/config
+	url = https://github.com/rkdals213/kb-jobtraining-env.git
