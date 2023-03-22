@@ -1,63 +1,78 @@
 <script></script>
 
 <header>
-  <div>
-  </div>
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <div></div>
+    <ul class="navbar_menu">
       <li>
         <a data-sveltekit-preload-data="tap" href="/">Home</a>
       </li>
       <li>
-        <a data-sveltekit-preload-data="tap" href="/subject-one">1. 상품판매</a>
+        <a data-sveltekit-preload-data="tap" href="/subject-one">상품판매</a>
       </li>
       <li>
-        <a data-sveltekit-preload-data="tap" href="/subject-two">2. 외환</a>
+        <a data-sveltekit-preload-data="tap" href="/subject-two">외환</a>
       </li>
       <li>
-        <a data-sveltekit-preload-data="tap" href="/subject-three">3. 다른거</a>
+        <a data-sveltekit-preload-data="tap" href="/subject-three">다른거</a>
       </li>
       <li>
-        <a data-sveltekit-preload-data="tap" href="/subject-four">4. 다른거</a>
+        <a data-sveltekit-preload-data="tap" href="/subject-four">다른거</a>
       </li>
     </ul>
+    <div></div>
   </nav>
-  <div>
-  </div>
+  <hr/>
 </header>
 
-<style>
-    header {
-        display: flex;
-        justify-content: space-between;
+<style lang="scss">
+  @import "../style/_color.scss";
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .navbar_menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .navbar_menu li {
+    padding: 1.5rem 1rem;
+  }
+
+  .navbar_menu li:hover {
+    background-color: $color-primary;
+    border-radius: 3px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    ul {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        height: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        background: var(--background);
-        background-size: contain;
+    .navbar_menu {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
 
-    li {
-        position: relative;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 0.5rem;
-        color: var(--color-text);
-        font-weight: 700;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        text-decoration: none;
-        transition: color 0.2s linear;
+    .navbar_menu li {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem;
     }
+  }
 
 </style>

@@ -1,9 +1,4 @@
-$color-light: #fff;
-$color-dark: #444;
-$color-secondary-light: #FEB6D3;
-$color-secondary: #FE79AB;
-$color-success: #01CECB;
-$color-success-light: #96E6E6;
+@import "color";
 
 .button-container {
   display: flex;
@@ -37,11 +32,13 @@ $color-success-light: #96E6E6;
     &-correct {
       background: $color-success;
       color: $color-success-light;
+      border-color: $color-success;
     }
 
     &-wrong {
       background: $color-secondary;
       color: $color-secondary-light;
+      border-color: $color-secondary;
     }
 
     &-nothing {
