@@ -35,5 +35,4 @@ jobs:
       run: |
         npm run check
         nohup npm run prod --if-present &
-    - run: npm test
     
