@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties(prefix = "notion")
 data class NotionProperty(
-    var databaseId: String,
-    var notionVersion: String,
-    var bearerToken: String
+    val databaseId: String = "",
+    val notionVersion: String = "",
+    val bearerToken: String = ""
 )
