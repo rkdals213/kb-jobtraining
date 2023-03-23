@@ -25,6 +25,7 @@ jobs:
     - name: Build with Gradle
       run: |
         java --version
+        ./gradlew -version
         sudo ./gradlew clean build
     - name: Build Docker Image
       uses: mr-smithers-excellent/docker-build-push@v5
