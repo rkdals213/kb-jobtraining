@@ -26,6 +26,7 @@ jobs:
         java --version
     - name: Build with Gradle
       run: |
+        update-alternatives --list java
         java --version
         ./gradlew -version
         sudo ./gradlew clean build
