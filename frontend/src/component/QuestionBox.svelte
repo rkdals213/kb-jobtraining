@@ -38,7 +38,7 @@
 
 <div class="square box">
   <p>
-    {question} 정답 : {answer}
+    {question}
   </p>
   <div class="button-container">
     <button class="{ContentClass['CONTENT_ONE']}" on:click="{() => {test('CONTENT_ONE', 1)}}">{content1}</button>
