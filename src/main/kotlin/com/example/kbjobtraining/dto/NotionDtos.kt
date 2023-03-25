@@ -1,6 +1,5 @@
 package com.example.kbjobtraining.dto
 
-
 data class QueryDatabaseRequest(
     val filter: Filter,
 ) {

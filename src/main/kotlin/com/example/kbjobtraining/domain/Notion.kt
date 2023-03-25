@@ -14,4 +14,5 @@ class Notion(
     fun findData(queryDatabaseRequest: QueryDatabaseRequest): QueryDatabaseResponse {
         return notionFeignClient.findQuestions(notionProperty.databaseId, queryDatabaseRequest)
     }
+
 }
