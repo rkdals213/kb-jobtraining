@@ -1,7 +1,7 @@
 package com.example.kbjobtraining.dto
 
 data class FindQuestionResponse(
-    val result: List<Question>
+    val result: List<Question>,
 )
 
 data class Question(
@@ -11,5 +11,6 @@ data class Question(
     val content2: String,
     val content3: String,
     val content4: String,
-    val answer: Int
+    val answer: Int,
+    val comment: String,
 )

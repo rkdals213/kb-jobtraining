@@ -28,6 +28,8 @@ data class QueryDatabaseResponse(
             val content3: Content,
             val content4: Content,
             val answer: Answer,
+            val comment: Comment,
+            val source: Source
         ) {
             data class Subject(
                 val id: String,
@@ -62,6 +64,16 @@ data class QueryDatabaseResponse(
                 val id: String,
                 val type: String,
                 val number: Int,
+            )
+
+            data class Comment(
+                val id: String,
+                val rich_text: List<RichText>,
+            )
+
+            data class Source(
+                val id: String,
+                val rich_text: List<RichText>,
             )
         }
     }

@@ -35,7 +35,8 @@ class FindQuestionController(
                 content2 = it.properties.content2.rich_text[0].text.content,
                 content3 = it.properties.content3.rich_text[0].text.content,
                 content4 = it.properties.content4.rich_text[0].text.content,
-                answer = it.properties.answer.number
+                answer = it.properties.answer.number,
+                comment = "${it.properties.comment.rich_text[0].text.content} : ${it.properties.source.rich_text[0].text.content}"
             )
         }.shuffled()
 }
