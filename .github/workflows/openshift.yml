@@ -10,7 +10,7 @@ jobs:
     - name: Docker run
       working-directory: /home/ubuntu/kb-jobtraining/frontend
       run: |
-        ls
+        pwd
         git pull
         npm run build
         pm2 stop index && pm2 delete index && pm2 start build/index.js
