@@ -5,6 +5,7 @@
   export let content3
   export let content4
   export let answer
+  export let studyMode
 
   export let comment
 
@@ -40,10 +41,13 @@
     ContentClass[ContentNumber[answer]] = 'btn btn-correct'
   }
 </script>
-
 <div class="square box">
   <p>
     {question}
+    {#if studyMode}
+      <hr />
+      정답 : {answer}
+    {/if}
   </p>
   <div class="button-container">
     <button class="{ContentClass['CONTENT_ONE']}" on:click="{() => {submitAnswer('CONTENT_ONE', 1)}}">{content1}</button>
@@ -51,7 +55,7 @@
     <button class="{ContentClass['CONTENT_THREE']}" on:click="{() => {submitAnswer('CONTENT_THREE', 3)}}">{content3}</button>
     <button class="{ContentClass['CONTENT_FOUR']}" on:click="{() => {submitAnswer('CONTENT_FOUR', 4)}}">{content4}</button>
   </div>
-  {#if submitted}
+  {#if submitted || studyMode}
     <hr />
     해설 : {comment}
   {/if}
