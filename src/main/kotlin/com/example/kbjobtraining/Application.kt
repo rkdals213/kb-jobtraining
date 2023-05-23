@@ -1,9 +1,9 @@
 package com.example.kbjobtraining
 
 import com.example.kbjobtraining.config.NotionProperty
-import com.example.kbjobtraining.domain.NotionCacheRepository
-import com.example.kbjobtraining.domain.Subject
-import com.example.kbjobtraining.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.app.domain.NotionCacheRepository
+import com.example.kbjobtraining.app.domain.Subject
+import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
 import jakarta.annotation.PostConstruct
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan

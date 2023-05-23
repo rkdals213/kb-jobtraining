@@ -1,4 +1,4 @@
-package com.example.kbjobtraining.dto
+package com.example.kbjobtraining.app.dto
 
 data class QueryDatabaseRequest(
     val filter: Filter,

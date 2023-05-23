@@ -1,9 +1,9 @@
-package com.example.kbjobtraining.presentation
+package com.example.kbjobtraining.app.presentation
 
-import com.example.kbjobtraining.dto.FindQuestionResponse
-import com.example.kbjobtraining.dto.QueryDatabaseResponse
-import com.example.kbjobtraining.dto.Question
-import com.example.kbjobtraining.usecase.FindQuestionUseCase
+import com.example.kbjobtraining.app.dto.FindQuestionResponse
+import com.example.kbjobtraining.app.dto.QueryDatabaseResponse
+import com.example.kbjobtraining.app.dto.Question
+import com.example.kbjobtraining.app.usecase.FindQuestionUseCase
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping

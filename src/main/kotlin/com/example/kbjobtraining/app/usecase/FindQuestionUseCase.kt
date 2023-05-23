@@ -1,14 +1,14 @@
-package com.example.kbjobtraining.usecase
+package com.example.kbjobtraining.app.usecase
 
-import com.example.kbjobtraining.domain.Notion
-import com.example.kbjobtraining.domain.Subject
-import com.example.kbjobtraining.dto.QueryDatabaseRequest
-import com.example.kbjobtraining.dto.QueryDatabaseResponse
+import com.example.kbjobtraining.app.domain.NotionRepository
+import com.example.kbjobtraining.app.domain.Subject
+import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.app.dto.QueryDatabaseResponse
 import org.springframework.stereotype.Component
 
 @Component
 class FindQuestionUseCase(
-    private val notion: Notion,
+    private val notionRepository: NotionRepository,
 ) {
 
     data class InputValue(
@@ -25,6 +25,6 @@ class FindQuestionUseCase(
             )
         )
 
-        return notion.findData(queryDatabaseRequest)
+        return notionRepository.findData(queryDatabaseRequest)
     }
 }

@@ -1,8 +1,8 @@
-package com.example.kbjobtraining.infrastructure
+package com.example.kbjobtraining.app.infrastructure
 
 import com.example.kbjobtraining.config.NotionProperty
-import com.example.kbjobtraining.dto.QueryDatabaseRequest
-import com.example.kbjobtraining.dto.QueryDatabaseResponse
+import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.app.dto.QueryDatabaseResponse
 import feign.RequestInterceptor
 import feign.RequestTemplate
 import org.springframework.cloud.openfeign.FeignClient

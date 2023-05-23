@@ -1,8 +1,9 @@
 package com.example.kbjobtraining.config
 
-import com.example.kbjobtraining.domain.NotionAspect
-import com.example.kbjobtraining.domain.NotionCacheRepository
-import com.example.kbjobtraining.presentation.FindQuestionControllerAspect
+import com.example.kbjobtraining.app.domain.NotionAspect
+import com.example.kbjobtraining.app.domain.NotionCacheRepository
+import com.example.kbjobtraining.config.log.LogTrace
+import com.example.kbjobtraining.config.log.LogTraceAspect
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -11,11 +12,12 @@ import org.springframework.context.annotation.Configuration
 class AopConfig(
     private val notionCacheRepository: NotionCacheRepository,
     private val applicationEventPublisher: ApplicationEventPublisher,
+    private val logTrace: LogTrace
 ) {
 
     @Bean
     fun notionAspect(): NotionAspect = NotionAspect(notionCacheRepository, applicationEventPublisher)
 
     @Bean
-    fun findQuestionControllerAspect(): FindQuestionControllerAspect = FindQuestionControllerAspect()
+    fun logTraceAspect(): LogTraceAspect = LogTraceAspect(logTrace)
 }

@@ -1,6 +1,6 @@
-package com.example.kbjobtraining.domain
+package com.example.kbjobtraining.app.domain
 
-import com.example.kbjobtraining.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
 import org.aspectj.lang.ProceedingJoinPoint
 import org.aspectj.lang.annotation.Around
 import org.aspectj.lang.annotation.Aspect
@@ -12,7 +12,7 @@ class NotionAspect(
     private val applicationEventPublisher: ApplicationEventPublisher,
 ) {
 
-    @Around("execution(* com.example.kbjobtraining.domain.Notion.findData(..))")
+    @Around("execution(* com.example.kbjobtraining.app.domain.NotionRepository.findData(..))")
     fun execute(joinPoint: ProceedingJoinPoint): Any {
         val queryDatabaseRequest = joinPoint.args[0] as QueryDatabaseRequest
         val subject = Subject.findByContent(queryDatabaseRequest.subject())

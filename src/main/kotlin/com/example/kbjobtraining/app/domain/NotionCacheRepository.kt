@@ -1,8 +1,8 @@
-package com.example.kbjobtraining.domain
+package com.example.kbjobtraining.app.domain
 
 import com.example.kbjobtraining.config.NotionProperty
-import com.example.kbjobtraining.dto.QueryDatabaseRequest
-import com.example.kbjobtraining.infrastructure.NotionFeignClient
+import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.app.infrastructure.NotionFeignClient
 import org.springframework.context.event.EventListener
 import org.springframework.scheduling.annotation.Async
 import org.springframework.stereotype.Repository
