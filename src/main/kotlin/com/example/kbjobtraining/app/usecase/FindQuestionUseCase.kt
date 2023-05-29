@@ -1,7 +1,7 @@
 package com.example.kbjobtraining.app.usecase
 
 import com.example.kbjobtraining.app.domain.NotionRepository
-import com.example.kbjobtraining.app.domain.Subject
+import com.example.kbjobtraining.app.dto.Subject
 import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
 import com.example.kbjobtraining.app.dto.QueryDatabaseResponse
 import org.springframework.stereotype.Component

@@ -1,8 +1,10 @@
 package com.example.kbjobtraining.app.domain
 
-import com.example.kbjobtraining.config.NotionProperty
 import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
+import com.example.kbjobtraining.app.dto.RefreshNotionCache
+import com.example.kbjobtraining.app.dto.Subject
 import com.example.kbjobtraining.app.infrastructure.NotionFeignClient
+import com.example.kbjobtraining.config.NotionProperty
 import org.springframework.context.event.EventListener
 import org.springframework.scheduling.annotation.Async
 import org.springframework.stereotype.Repository
@@ -12,6 +14,7 @@ import java.time.LocalDateTime
 class NotionCacheRepository(
     private val notionFeignClient: NotionFeignClient,
     private val notionProperty: NotionProperty,
+    private val duration: Long = 1L
 ) {
 
     private val cache: MutableMap<Subject, NotionCache> = mutableMapOf()
@@ -34,14 +37,5 @@ class NotionCacheRepository(
         cache[subject] = newNotionCache
 
         return newNotionCache
-    }
-
-    data class RefreshNotionCache(
-        val subject: Subject,
-        val queryDatabaseRequest: QueryDatabaseRequest,
-    )
-
-    companion object {
-        private const val duration = 1L
     }
 }

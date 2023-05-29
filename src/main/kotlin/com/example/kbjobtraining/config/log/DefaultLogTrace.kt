@@ -1,12 +1,14 @@
 package com.example.kbjobtraining.config.log
 
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 
 @Component
-class DefaultLogTrace : LogTrace {
-
-    private val traceIdHolder = ThreadLocal<TraceId>()
+class DefaultLogTrace(
+    private val log: Logger = LoggerFactory.getLogger(DefaultLogTrace::class.java),
+    private val traceIdHolder: ThreadLocal<TraceId> = ThreadLocal<TraceId>(),
+) : LogTrace {
 
     override fun begin(message: String): TraceStatus {
         syncTraceId()
@@ -80,7 +82,5 @@ class DefaultLogTrace : LogTrace {
         private const val START_PREFIX = "-->"
         private const val COMPLETE_PREFIX = "<--"
         private const val EX_PREFIX = "<X-"
-
-        private val log = LoggerFactory.getLogger(this::class.java)
     }
 }

@@ -29,7 +29,7 @@ data class QueryDatabaseResponse(
             val content4: Content,
             val answer: Answer,
             val comment: Comment,
-            val source: Source
+            val source: Source,
         ) {
             data class Subject(
                 val id: String,

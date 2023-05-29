@@ -1,4 +1,4 @@
-package com.example.kbjobtraining.app.domain
+package com.example.kbjobtraining.app.dto
 
 enum class Subject(
     val content: String,

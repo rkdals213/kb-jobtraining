@@ -2,7 +2,7 @@ package com.example.kbjobtraining
 
 import com.example.kbjobtraining.config.NotionProperty
 import com.example.kbjobtraining.app.domain.NotionCacheRepository
-import com.example.kbjobtraining.app.domain.Subject
+import com.example.kbjobtraining.app.dto.Subject
 import com.example.kbjobtraining.app.dto.QueryDatabaseRequest
 import jakarta.annotation.PostConstruct
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
 import org.springframework.cloud.openfeign.EnableFeignClients
+import org.springframework.context.annotation.Profile
 import org.springframework.scheduling.annotation.EnableAsync
 import org.springframework.stereotype.Component
 
@@ -25,6 +26,7 @@ fun main(args: Array<String>) {
 }
 
 @Component
+@Profile(value = ["local", "prod"])
 class InitService(
     private val notionCacheRepository: NotionCacheRepository,
 ) {

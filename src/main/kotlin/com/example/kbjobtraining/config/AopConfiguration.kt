@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class AopConfig(
+class AopConfiguration(
     private val notionCacheRepository: NotionCacheRepository,
     private val applicationEventPublisher: ApplicationEventPublisher,
-    private val logTrace: LogTrace
+    private val logTrace: LogTrace,
 ) {
 
     @Bean
